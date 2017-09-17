@@ -1,22 +1,15 @@
 html,
 body {
   background-color: #F5294C;
-}
-[data-dpr=2] {
-  font-size: 24px;
-  color: blue;
-}
-[data-dpr=1] {
-  font-size: 16px;
-  color: green;
+  font-size: 3.2px;
 }
 .wrapper {
-  background-color: greenyellow;
+  background-color: black;
 }
 .wrapper .banner {
   width: 100%;
-  height: 6.41333333rem;
-  background-image: url('img/taobao.jpg');
+  height: 64.13333333vw;
+  background-image: url('../img/taobao.jpg');
   background-repeat: no-repeat;
   background-size: auto 100% ;
   background-position: 50% 50%;
@@ -24,7 +17,8 @@ body {
 }
 .wrapper ul {
   background-color: #F5294C;
-  padding: 0.2rem;
+  padding: 2vw;
+  margin: 0;
 }
 .wrapper ul li {
   vertical-align: top;
@@ -36,23 +30,23 @@ body {
 .wrapper ul li a.thumbnail-link {
   display: block;
   float: left;
-  padding: 0.13333333rem 0;
+  padding: 1.33333333vw 0;
 }
 .wrapper ul li a.thumbnail-link .thumbnail {
   float: left;
-  background-image: url('img/clock.jpg');
+  background-image: url('../img/clock.jpg');
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: 50% 50%;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 24vw;
+  height: 24vw;
 }
 .wrapper ul li a.thumbnail-link img {
-  width: 2.4rem;
+  width: 24vw;
 }
 .wrapper ul li .info {
-  width: 6.93333333rem;
-  padding: 0.13333333rem;
+  width: 69.33333333vw;
+  padding: 1.33333333vw;
   line-height: 200%;
   float: left;
 }
@@ -65,7 +59,7 @@ body {
   color: #fff;
 }
 .wrapper ul li .info .price {
-  font-size: 0.384rem;
+  font-size: 3.84vw;
   color: #F5294C;
   font-weight: bold;
 }
@@ -73,8 +67,8 @@ body {
   color: #F5294C;
 }
 .wrapper ul li .info input {
-  height: 0.64rem;
-  width: 2.13333333rem;
+  height: 6.4vw;
+  width: 21.33333333vw;
   border: none;
   color: #fff;
   background-color: #F5294C;
