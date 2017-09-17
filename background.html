@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>background</title>
+  <link rel="stylesheet" href="./normalize.css">
+  <style>
+    .wrapper {
+      background-color: #666;
+      /* height: 100vh; */
+    }
+
+    .origin {
+      width: 500px;
+      height: 372px;
+      background-image: url('./img/clock.jpg');
+    }
+
+    .pic {
+
+      background-image: url('./img/clock.jpg');
+      display: inline-block;
+      /* color: red; */
+      background-color: #ccc;
+      background-repeat: no-repeat;
+      /* margin-right: 10%; */
+      margin: 10px;
+    }
+
+    .vertical {
+      width: 250px;
+      height: 450px;
+    }
+
+    .horizon {
+      height: 250px;
+      width: 450px;
+    }
+
+    .mode2 {
+      background-size: 100% auto;
+    }
+
+    .mode3 {
+      background-size: 100% auto;
+      background-position: 50% 50%;
+    }
+
+
+
+    .mode4 {
+      background-size: auto 100%;
+    }
+
+    .mode5 {
+      background-size: auto 100%;
+      background-position: 50% 50%;
+    }
+
+    .fill {
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <div class="origin">origin</div>
+    <div class="pic vertical none">短图origin</div>
+    <div class="pic vertical mode2">
+      短图2
+
+    </div>
+    <div class="pic vertical mode3">短图3
+
+
+    </div>
+    <div class="pic vertical mode4">短图4</div>
+    <div class="pic vertical mode5">短图5</div>
+    <div class="pic vertical fill">短图拉伸</div>
+
+    <div class="pic horizon none">长图origin</div>
+    <div class="pic horizon mode2">长图2</div>
+    <div class="pic horizon mode3">长图3</div>
+    <div class="pic horizon mode4">长图4</div>
+    <div class="pic horizon mode5">长图5</div>
+    <div class="pic horizon fill">长图拉伸</div>
+  </div>
+  <script>
+    let log = console.log
+    function init() {
+      let pics = document.querySelectorAll('.pic')
+      for (let i = 0; i < pics.length; i++) {
+        let pic = pics[i]
+        let style = window.getComputedStyle(pic)
+        let bgSize = style.backgroundSize
+        let bgPos = style.backgroundPosition
+        // log(window.getComputedStyle(pic).backgroundSize)
+        pic.innerHTML = `${pic.innerHTML}<br/>background-size:${bgSize}<br/>background-position:${bgPos}`
+      }
+    }
+    window.onload = init
+  </script>
+</body>
+
+</html>

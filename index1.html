@@ -52,9 +52,24 @@
   </div>
   <script>
     let log = console.log
-    log('dpr = ' + window.devicePixelRatio)
-    log('appVersion = ', window.navigator.appVersion)
-    log(window.navigator)
+    // log('dpr = ' + window.devicePixelRatio)
+    // log('appVersion = ', window.navigator.appVersion)
+    // log(window.navigator)
+
+    function flex() {
+      let appVersion = window.navigator.appVersion
+      let isIphone = appVersion.match(/iphone/gi) ? true : false
+      let isAndriod = appVersion.match(/android/gi) ? true : false
+      let dpr = window.devicePixelRatio
+      log('iphone ', isIphone)
+      log('android ', isAndriod)
+      log('dpr ', dpr)
+
+      let html = document.querySelector('html')
+
+      log(html.dataset)
+    }
+    flex()
   </script>
 </body>
 
