@@ -4,6 +4,11 @@ body {
 }
 [data-dpr=2] {
   font-size: 24px;
+  color: blue;
+}
+[data-dpr=1] {
+  font-size: 16px;
+  color: green;
 }
 .wrapper {
   background-color: greenyellow;
@@ -66,9 +71,6 @@ body {
 }
 .wrapper ul li .info .discount {
   color: #F5294C;
-}
-.wrapper ul li .info p.slogan {
-  color: #f60;
 }
 .wrapper ul li .info input {
   height: 0.64rem;
