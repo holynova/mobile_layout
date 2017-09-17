@@ -1,3 +1,10 @@
+html,
+body {
+  background-color: #F5294C;
+}
+[data-dpr=2] {
+  font-size: 24px;
+}
 .wrapper {
   background-color: greenyellow;
 }
@@ -8,21 +15,25 @@
   background-repeat: no-repeat;
   background-size: auto 100% ;
   background-position: 50% 50%;
-  background-color: red;
+  background-color: #F5294C;
 }
 .wrapper ul {
-  background-color: red;
+  background-color: #F5294C;
   padding: 0.2rem;
 }
 .wrapper ul li {
   vertical-align: top;
-  font-size: 0;
   position: relative;
   background-color: #fff;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #F5294C;
   overflow: auto;
 }
-.wrapper ul li .thumbnail {
+.wrapper ul li a.thumbnail-link {
+  display: block;
+  float: left;
+  padding: 0.13333333rem 0;
+}
+.wrapper ul li a.thumbnail-link .thumbnail {
   float: left;
   background-image: url('img/clock.jpg');
   background-repeat: no-repeat;
@@ -31,34 +42,40 @@
   width: 2.4rem;
   height: 2.4rem;
 }
+.wrapper ul li a.thumbnail-link img {
+  width: 2.4rem;
+}
 .wrapper ul li .info {
   width: 6.93333333rem;
   padding: 0.13333333rem;
   line-height: 200%;
   float: left;
-  font-size: 0.32rem;
 }
 .wrapper ul li .info a {
   display: block;
   color: #000;
 }
 .wrapper ul li .info .tag {
-  background-color: red;
+  background-color: #F5294C;
   color: #fff;
 }
 .wrapper ul li .info .price {
   font-size: 0.384rem;
-  color: red;
+  color: #F5294C;
+  font-weight: bold;
 }
 .wrapper ul li .info .discount {
-  color: red;
+  color: #F5294C;
+}
+.wrapper ul li .info p.slogan {
+  color: #f60;
 }
 .wrapper ul li .info input {
   height: 0.64rem;
   width: 2.13333333rem;
   border: none;
   color: #fff;
-  background-color: red;
+  background-color: #F5294C;
   position: absolute;
   right: 10px;
   bottom: 10px;

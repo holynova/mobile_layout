@@ -3,7 +3,14 @@
 
 // }
 @rem:75rem;
+@red:#F5294C;
 
+html,body{
+  background-color: @red;
+}
+[data-dpr=2]{
+  font-size: 24px;
+}
 .wrapper{
   background-color: greenyellow;
   .banner{
@@ -14,28 +21,38 @@
     background-repeat: no-repeat;
     background-size: auto 100% ;
     background-position: 50% 50%;
-    background-color: red;
+    background-color: @red;
   }
   ul{
-    background-color: red;
+    background-color: @red;
     padding: 15/@rem;
     li{
       vertical-align: top;
-      font-size: 0;
+      // font-size: 0;
       position: relative;
       background-color: #fff;
-      // border-bottom: 1px soild red;
-      border-bottom: 1px solid red;
+      // border-bottom: 1px soild @red;
+      border-bottom: 1px solid @red;
       overflow: auto;
-      .thumbnail{
+  
+      a.thumbnail-link{
+        display: block;
         float: left;
-        background-image: url('./img/clock.jpg');
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: 50% 50%;
-        width:180/@rem;
-        height: 180/@rem;
-        // display: inline-block;
+        padding: 10/@rem 0;
+        .thumbnail{
+          float: left;
+          background-image: url('./img/clock.jpg');
+          background-repeat: no-repeat;
+          background-size: auto 100%;
+          background-position: 50% 50%;
+          width:180/@rem;
+          height: 180/@rem;
+          // display: inline-block;
+        }
+        img{
+          width: 180/@rem;
+          // height: 180/@rem;
+        }
       }
       .info{
         width: 520/@rem;
@@ -43,7 +60,7 @@
         padding: 10/@rem;
         line-height: 200%;
         float: left;
-        font-size: 24/@rem;
+        // font-size: 24/@rem;
         // display: inline-block;
         // width: 520/@rem;
         a{
@@ -51,31 +68,31 @@
           color: #000;
         }
         .tag{
-          background-color: red;
+          background-color: @red;
           color: #fff;
           // padding: 2px;
           
         }
         .price{
           font-size: 24*1.2/@rem;
-          color: red;
+          color:@red;
+          font-weight: bold;  
         }
         .discount{
-          color:red;
+          color:@red;
         }
         p.slogan{
-
+          color:#f60;
         }
         input{
           height: 48/@rem;
           width: 160/@rem;
           border: none;
           color: #fff;
-          background-color: red;
+          background-color: @red;
           position: absolute;
           right:10px;
           bottom:10px;
-
         }
       }
     }
